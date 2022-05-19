@@ -28,7 +28,7 @@ services:
 
   mongodb:
     image: mongo
-    conatiner_name: name
+    conatiner_name: mongodb
 
   mysql:
     image: mysql:5.7
