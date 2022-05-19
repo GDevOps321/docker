@@ -9,24 +9,31 @@ services:
   catalogue:
     image:
     container_name: catalogue
+
   cart:
     image:
     container_name: cart
+
   user:
     image:
     container_name: user
+
   shipping:
     image:
     container_name: shipping
+
   payment:
     image:
     conatiner_name: payment
+
   mongodb:
     image: mongo
     conatiner_name: name
+
   mysql:
     image: mysql:5.7
     container_name: mysql
+
   redis:
     image: redis
     container_name: redis
