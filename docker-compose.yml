@@ -8,25 +8,25 @@ services:
 
   catalogue:
     image:
-    container_name:
+    container_name: catalogue
   cart:
     image:
-    container_name:
+    container_name: cart
   user:
     image:
-    container_name:
+    container_name: user
   shipping:
     image:
-    container_name:
+    container_name: shipping
   payment:
     image:
-    conatiner_name:
+    conatiner_name: payment
   mongodb:
-    image:
-    conatiner_name:
+    image: mongo
+    conatiner_name: name
   mysql:
     image: mysql:5.7
-    container_name:
+    container_name: mysql
   redis:
-    image:
-    container_name:
+    image: redis
+    container_name: redis
