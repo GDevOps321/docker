@@ -24,11 +24,11 @@ services:
 
   payment:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/payment:0.0.9
-    conatiner_name: payment
+    container_name: payment
 
   mongodb:
-    image: mongod
-    conatiner_name: mongodb
+    image: mongo
+    container_name: mongodb
 
   mysql:
     image: mysql:5.7
