@@ -54,6 +54,8 @@ services:
     container_name: mysql
     environment:
       MYSQL_ROOT_PASSWORD: password
+    volumes:
+      - /home/ubuntu/data/mysql:/data/db
 
   redis:
     image: redis
