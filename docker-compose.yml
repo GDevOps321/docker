@@ -5,35 +5,60 @@ services:
     container_name: forntned
     ports:
       - "80:80"
+    depends_on:
+      - catalogue
+      - user
+      - cart
+      - shipping
+      - payment
 
   catalogue:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/catalogue:0.0.5
     container_name: catalogue
+    depends_on:
+      - mongodb
 
   cart:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/cart:0.0.9
     container_name: cart
+    depends_on:
+      - redis
 
   user:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/user:0.0.9
     container_name: user
+    depends_on:
+      - mongodb
+      - redis
 
   shipping:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/shipping:0.0.8
     container_name: shipping
+    depends_on:
+      - mysql
 
   payment:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/payment:0.0.9
     container_name: payment
+    depends_on:
+      - rabbitmq
 
   mongodb:
     image: mongo
     container_name: mongodb
+    volumes:
+      - /home/ubuntu/data/mongo:/data/db
 
   mysql:
     image: mysql:5.7
     container_name: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: password
 
   redis:
     image: redis
     container_name: redis
+
+  rabbitmq:
+    image: rabbitmq
+    container_name:  rabbitmq
