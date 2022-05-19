@@ -23,8 +23,7 @@ services:
     container_name: cart
     depends_on:
       - redis
-    environment:
-      - CATALOGUE_ENDPOINT: cart:8080
+
 
   user:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/user:0.0.9
@@ -38,6 +37,8 @@ services:
     container_name: shipping
     depends_on:
       - mysql
+    environment:
+      CART_ENDPOINT: "cart:8080"
 
   payment:
     image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/payment:0.0.9
