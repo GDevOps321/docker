@@ -28,5 +28,7 @@ ONBUILD  ENV  URL=example.com
 #kill -l gives all the signals in os
 # we can use dockerfile name as different but when you are using in clu mention it with -f
 # through cli we can override the entrypoint by using --entrypoint
+# we can copy multiple files with one copy command but after files we have to mention directory path.
+# to give cmd valves we have to see the systemd service there is a  option called execstart there we can find values for cmd
 
 
