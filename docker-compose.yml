@@ -27,7 +27,7 @@ services:
     conatiner_name: payment
 
   mongodb:
-    image: mongo
+    image: mongod
     conatiner_name: mongodb
 
   mysql:
