@@ -1,29 +1,29 @@
 version: "3.9"
 services:
   frontend:
-    image:
+    image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/frontend:0.0.5
     container_name: forntned
     ports:
       - "80:80"
 
   catalogue:
-    image:
+    image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/catalogue:0.0.5
     container_name: catalogue
 
   cart:
-    image:
+    image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/cart:0.0.9
     container_name: cart
 
   user:
-    image:
+    image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/user:0.0.9
     container_name: user
 
   shipping:
-    image:
+    image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/shipping:0.0.8
     container_name: shipping
 
   payment:
-    image:
+    image: 191059510084.dkr.ecr.us-east-1.amazonaws.com/payment:0.0.9
     conatiner_name: payment
 
   mongodb:
